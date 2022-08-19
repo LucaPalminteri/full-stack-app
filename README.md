@@ -4,3 +4,5 @@
 - [Node.js](https://nodejs.org/en/){target="_blank"}
 - [Express](https://expressjs.com/){target="_blank"}
 - [MySql](https://www.mysql.com/){target="_blank"}
+
+(<a href="https://lucapalminteri.com" target="_blank">my link</a>)
