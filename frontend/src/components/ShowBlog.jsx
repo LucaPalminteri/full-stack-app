@@ -20,19 +20,22 @@ const CompShowBlogs = () => {
 
     // Dekete blog
     const deleteBlog = async (id) => {
-        const res = await axios.delete(`${URI}/${id}`)
+        await axios.delete(`${URI}/${id}`)
         getBlogs()
     }
 
     return (
         <>
+        <button>
+            <Link to={'/create'}>Create</Link>
+        </button>
             {blogs.map(blog => {
                 return (
                 <div className='blog' key={blog.id}>
                     <h2>Title: {blog.title}</h2>
                     <p>Content: {blog.content}</p>
                     <button>
-                        {/* <Link to={`/edit/${blog.id}`}>Edit</Link> */}
+                        <Link to={`/edit/${blog.id}`}>Edit</Link>
                     </button>
                     <button onClick={ () => deleteBlog(blog.id) }>Delete</button>
                 </div>

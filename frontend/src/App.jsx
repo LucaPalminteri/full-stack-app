@@ -1,12 +1,20 @@
-import { useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ShowBlog from './components/ShowBlog.jsx'
+import CreateBlog from './components/CreateBlog.jsx'
+import EditBlog from './components/EditBlog.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <ShowBlog />
+
+      <BrowserRouter>
+        <Routes>
+            <Route exact path='/' element={<ShowBlog/>}/>
+            <Route path='/create' element={<CreateBlog/>} />
+            <Route path='/edit/:id' element={<EditBlog/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
