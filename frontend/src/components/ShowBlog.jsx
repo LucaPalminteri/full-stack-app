@@ -5,18 +5,17 @@ import {Link} from 'react-router-dom'
 const URI = 'http://localhost:3000/blogs'
 
 const CompShowBlogs = () => {
-    const [blog, setBlog] = useState([])
+    const [blogs, setBlogs] = useState([])
 
     
     useEffect(()=> {
         getBlogs()
     },[])
-    console.log(blog);
 
     // Show all blogs
     const getBlogs = async () => {
         const res = await axios.get(URI)
-        setBlog(res.data)
+        setBlogs(res.data)
     }
 
     // Dekete blog
@@ -26,9 +25,20 @@ const CompShowBlogs = () => {
     }
 
     return (
-        <div>
-            <h1>Title</h1>
-        </div>
+        <>
+            {blogs.map(blog => {
+                return (
+                <div className='blog' key={blog.id}>
+                    <h2>Title: {blog.title}</h2>
+                    <p>Content: {blog.content}</p>
+                    <button>
+                        {/* <Link to={`/edit/${blog.id}`}>Edit</Link> */}
+                    </button>
+                    <button onClick={ () => deleteBlog(blog.id) }>Delete</button>
+                </div>
+                )
+            })}
+        </>
     )
 
 }
