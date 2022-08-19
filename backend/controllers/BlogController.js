@@ -16,6 +16,7 @@ export const getBlog = async (req,res) => {
         const blog = await BlogModel.findAll({
             where: { id: req.params.id}
         })
+        res.json(blog[0])
     } catch (error) {
         res.json({message: error.message})
     }
@@ -24,7 +25,7 @@ export const getBlog = async (req,res) => {
 // Crear un registro
 export const createBlog = async (req,res) => {
     try {
-        await BlogModel.create(req,body)
+        await BlogModel.create(req.body)
         res.json({
             "message":"Register created succesfully!"
         })
@@ -50,7 +51,7 @@ export const updateBlog = async (req,res) => {
 // Eliminar un registro
 export const deleteBlog = async (req,res) => {
     try {
-        await BlogModel.destroy(req.body, {
+        await BlogModel.destroy({
             where: { id: req.params.id}
         })
         res.json({

@@ -7,9 +7,9 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-// app.get('/', (req,res)=> {
-//     res.send('Hi there!')
-// })
+app.get('/', (req,res)=> {
+    res.send('Hi there!')
+})
 
 app.use('/blogs', blogRoutes)
 
