@@ -1,6 +1,8 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome" 
+import { faPenToSquare, faPlus, faTrash } from '@fortawesome/free-solid-svg-icons'
 
 const URI = 'http://localhost:3000/blogs'
 
@@ -25,27 +27,30 @@ const CompShowBlogs = () => {
     }
 
     return (
-        <>
-        <button>
-            <Link to={'/create'}>Create</Link>
-        </button>
-            {blogs.map(blog => {
-                return (
-                <div className='blog' key={blog.id}>
-                    <div className='blog__info'>
-                        <h2>{blog.title}</h2>
-                        <p>{blog.content}</p>
+        <div className='container'>
+            <h1 className='create-title'>FullStack Application List</h1>
+            <Link to={'/create'} className='btn-create'>
+                <FontAwesomeIcon className="icon" icon={faPlus}/>
+            </Link>
+                {blogs.map(blog => {
+                    return (
+                    <div className='blog' key={blog.id}>
+                        <div className='blog__info'>
+                            <h2>{blog.title}</h2>
+                            <p>{blog.content}</p>
+                        </div>
+                        <div className='blog__btn-container'> 
+                                <Link to={`/edit/${blog.id}`} className='btn-edit'>
+                                    <FontAwesomeIcon className="icon" icon={faPenToSquare}/>
+                                </Link>
+                            <button className='btn-delete' onClick={ () => deleteBlog(blog.id) }>
+                                <FontAwesomeIcon className="icon" icon={faTrash}/>
+                            </button>
+                        </div>
                     </div>
-                    <div className='blog__btn-container'>                
-                        <button className='btn-edit'>
-                            <Link to={`/edit/${blog.id}`}>E</Link>
-                        </button>
-                        <button className='btn-delete' onClick={ () => deleteBlog(blog.id) }>D</button>
-                    </div>
-                </div>
-                )
-            })}
-        </>
+                    )
+                })}
+        </div>
     )
 
 }

@@ -8,10 +8,34 @@ a {
     color: black;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-title {
+    text-align: center;
+}
+
+.btn-create {
+    align-self: center;
+    border: none;
+    background-color: #88FF88;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+.btn-create:hover {
+    background-color: #00FF00;
+}
+
 .blog {
-    border: 2px solid #91BA56;;
-    border-radius: 10px;
-    margin: 10px;
+    box-shadow: 0px 0px 10px #BEBEBE;
+    margin: 10px 20px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -31,15 +55,29 @@ a {
 }
 
 .blog__btn-container .btn-delete {
-    background-color: rgb(245, 65, 65);
+    background-color: rgb(241, 95, 95);
+    transition-duration: .2s;
+}
+
+.blog__btn-container .btn-delete:hover {
+    background-color: red;
 }
 
 .blog__btn-container .btn-edit {
     background-color: rgb(216, 216, 70);
+    transition-duration: .2s;
+    margin: 5px;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.blog__btn-container .btn-edit:hover {
+    background-color: yellow;
 }
 
 .blog__info {
     flex-grow: 1;
+    margin-right: 10px;
 }
 
 .blog__info h2 {
@@ -48,6 +86,5 @@ a {
 
 .blog__info p {
     margin-top: 5px;
-    background-color:  #EFEFEF;
     padding: 10px 4px;
 }
