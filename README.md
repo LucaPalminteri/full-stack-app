@@ -4,7 +4,7 @@
 This application is divided in two main parts; Front-End and Back-End.
 
 ### Front-End
-I developed the user interface with the React library. The project uses react-router-dom, axios.
+I developed the user interface with the React library. The project uses react-router-dom for routing and axios to handle server requests (GET,POST,PUT,DELETE).
 
 - [React.js](https://reactjs.org/)
 - [axios](https://axios-http.com/)
@@ -20,3 +20,12 @@ The server for this project runs locally, I use Xampp Application. Whit Xampp I'
 - [mysql2](https://www.npmjs.com/package/mysql2)
 - [sequelize](https://sequelize.org/)
 - [nodemon](https://nodemon.io/)
+
+### Clone repository
+
+```
+git clone https://github.com/LucaPalminteri/full-stack-app.git
+
+cd full-stack-app
+npm run dev
+```
