@@ -1,5 +1,4 @@
 # Full Stack Application
----
 ## Explanation
 
 This application is divided in two main parts; Front-End and Back-End.
