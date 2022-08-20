@@ -1,4 +1,15 @@
 # Full Stack Application
+
+### Clone repository
+
+```
+git clone https://github.com/LucaPalminteri/full-stack-app.git
+```
+### Start the project
+```
+cd full-stack-app
+npm run dev
+```
 ## Explanation
 
 This application is divided in two main parts; Front-End and Back-End.
@@ -20,14 +31,3 @@ The server for this project runs locally, I use Xampp Application. Whit Xampp I'
 - [mysql2](https://www.npmjs.com/package/mysql2)
 - [sequelize](https://sequelize.org/)
 - [nodemon](https://nodemon.io/)
-
-### Clone repository
-
-```
-git clone https://github.com/LucaPalminteri/full-stack-app.git
-```
-### Start the project
-```
-cd full-stack-app
-npm run dev
-```
