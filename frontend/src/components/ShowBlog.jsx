@@ -32,12 +32,16 @@ const CompShowBlogs = () => {
             {blogs.map(blog => {
                 return (
                 <div className='blog' key={blog.id}>
-                    <h2>Title: {blog.title}</h2>
-                    <p>Content: {blog.content}</p>
-                    <button>
-                        <Link to={`/edit/${blog.id}`}>Edit</Link>
-                    </button>
-                    <button onClick={ () => deleteBlog(blog.id) }>Delete</button>
+                    <div className='blog__info'>
+                        <h2>{blog.title}</h2>
+                        <p>{blog.content}</p>
+                    </div>
+                    <div className='blog__btn-container'>                
+                        <button className='btn-edit'>
+                            <Link to={`/edit/${blog.id}`}>E</Link>
+                        </button>
+                        <button className='btn-delete' onClick={ () => deleteBlog(blog.id) }>D</button>
+                    </div>
                 </div>
                 )
             })}

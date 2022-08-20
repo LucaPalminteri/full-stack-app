@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.blog {
+    border: 2px solid #91BA56;;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog__btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.blog__btn-container button {
+    margin: 5px;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.blog__btn-container .btn-delete {
+    background-color: rgb(245, 65, 65);
+}
+
+.blog__btn-container .btn-edit {
+    background-color: rgb(216, 216, 70);
+}
+
+.blog__info {
+    flex-grow: 1;
+}
+
+.blog__info h2 {
+    border-bottom: 2px solid #ABABAB;
+}
+
+.blog__info p {
+    margin-top: 5px;
+    background-color:  #EFEFEF;
+    padding: 10px 4px;
+}
