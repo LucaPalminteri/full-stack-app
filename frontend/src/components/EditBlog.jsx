@@ -29,14 +29,16 @@ const EditBlog = () => {
     }
     
     return (
-        <>
-            <h3>Edit blog</h3>
-            <form onSubmit={update}>
+        <div className="blog-container">
+            <h3>EDIT BLOG</h3>
+            <form onSubmit={update} className="blog-container__form-container">
+                <label htmlFor="title">Title:</label>
                 <input type="text" value={title} onChange = { (e) => setTitle(e.target.value)} />
+                <label htmlFor="content">Content:</label>
                 <textarea type="text" value={content} onChange = { (e) => setContent(e.target.value)} />
                 <button type="submit">Update</button>
             </form>
-        </>
+        </div>
     )
 }
 

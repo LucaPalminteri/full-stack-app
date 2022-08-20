@@ -17,14 +17,16 @@ const CreateBlog = () => {
     }
     
     return (
-        <>
-            <h3>Create blog</h3>
-            <form onSubmit={store}>
-                <input type="text" value={title} placeholder={'title'} onChange = { (e) => setTitle(e.target.value)} />
-                <textarea type="text" value={content} placeholder={'content'} onChange = { (e) => setContent(e.target.value)} />
+        <div className="blog-container">
+            <h3>CREATE BLOG</h3>
+            <form onSubmit={store} className="blog-container__form-container">
+                <label htmlFor="title">Title:</label>
+                <input type="text" value={title} placeholder={'Type here...'} onChange = { (e) => setTitle(e.target.value)} />
+                <label htmlFor="content">Content:</label>
+                <textarea type="text" value={content} placeholder={'Type here...'} onChange = { (e) => setContent(e.target.value)} />
                 <button type="submit">Create</button>
             </form>
-        </>
+        </div>
     )
 }
 
