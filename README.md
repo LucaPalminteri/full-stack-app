@@ -11,7 +11,7 @@ I developed the user interface with the React library. The project uses react-ro
 - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 
 ### Back-End
-The server for this project runs locally, I use Xampp Application. Whit Xampp I'm able to use Apache server and MySQL on differents ports. I configured some settings in order to work properly. The Back-End language is JavaScript with NodeJS.
+The server for this project runs locally, I use Xampp Application. Whit Xampp I'm able to use Apache server and MySQL on differents ports. I configured some settings in order to work properly. The Back-End language is JavaScript with NodeJS. Uses Sequelize as an ORM for the application to connect with the database and make the request queries easier.
 
 - [Node.js](https://nodejs.org/en/)
 - [MySql](https://www.mysql.com/)
@@ -25,7 +25,9 @@ The server for this project runs locally, I use Xampp Application. Whit Xampp I'
 
 ```
 git clone https://github.com/LucaPalminteri/full-stack-app.git
-
+```
+### Start the project
+```
 cd full-stack-app
 npm run dev
 ```
