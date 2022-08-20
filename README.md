@@ -31,3 +31,8 @@ The server for this project runs locally, I use Xampp Application. Whit Xampp I'
 - [mysql2](https://www.npmjs.com/package/mysql2)
 - [sequelize](https://sequelize.org/)
 - [nodemon](https://nodemon.io/)
+
+### Luca Palminteri
+
+- [Website](https://lucapalminteri.com/)
+- [LinkedIn](https://www.linkedin.com/in/luca-palminteri/)
